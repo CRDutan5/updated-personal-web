@@ -5,17 +5,20 @@ import Footer from "./Footer";
 import About from "./About";
 import Technical from "./Technical";
 import Education from "./Education";
+import Projects from "./Projects";
 
 const App = () => {
   const [visibilityStates, setVisibilityStates] = useState({
     landingPage: true, // Start with true for LandingPage
     technicalPage: false,
     educationPage: false,
+    projectPage: false,
   });
 
   const landingPageRef = useRef(null);
   const technicalRef = useRef(null);
   const educationRef = useRef(null);
+  const projectRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,6 +39,11 @@ const App = () => {
               ...prev,
               educationPage: entry.isIntersecting,
             }));
+          } else if (entry.target === projectRef.current) {
+            setVisibilityStates((prev) => ({
+              ...prev,
+              projectPage: entry.isIntersecting,
+            }));
           }
         });
       },
@@ -45,11 +53,13 @@ const App = () => {
     if (landingPageRef.current) observer.observe(landingPageRef.current);
     if (technicalRef.current) observer.observe(technicalRef.current);
     if (educationRef.current) observer.observe(educationRef.current);
+    if (projectRef.current) observer.observe(projectRef.current);
 
     return () => {
       if (landingPageRef.current) observer.unobserve(landingPageRef.current);
       if (technicalRef.current) observer.unobserve(technicalRef.current);
       if (educationRef.current) observer.unobserve(educationRef.current);
+      if (projectRef.current) observer.unobserve(projectRef.current);
     };
   }, []);
 
@@ -68,6 +78,7 @@ const App = () => {
         ref={educationRef}
         isVisible={visibilityStates.educationPage}
       />
+      <Projects ref={projectRef} isVisible={visibilityStates.projectPage} />
       {/* <Footer /> */}
     </div>
   );

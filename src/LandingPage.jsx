@@ -26,43 +26,46 @@ const LandingPage = React.forwardRef(({ isVisible }, ref) => {
             ways to push the boundaries of what’s possible in software
             development.
           </p>
-          <div className="rounded-xl flex space-x-4 max-w-fit mb-4">
-            <a href="">
-              <FontAwesomeIcon
-                icon={faGithub}
-                size="2x"
-                className="text-blue-600 py-4 pr-4"
+          <div className="flex justify-center md:justify-start">
+            <div className="rounded-xl flex space-x-4 max-w-full mb-4">
+              <a href="">
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="2x"
+                  className="text-blue-600 py-4 pr-4"
+                  target="_blank"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/carlitosdutan/"
                 target="_blank"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/carlitosdutan/"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                size="2x"
-                className="p-4 text-blue-600"
-              />
-            </a>
-            <a
-              href="mailto:carlitosrdutan@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                size="2x"
-                className="p-4 text-blue-600"
-              />
-            </a>
-            {/* <FontAwesomeIcon
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  size="2x"
+                  className="p-4 text-blue-600"
+                />
+              </a>
+              <a
+                href="mailto:carlitosrdutan@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size="2x"
+                  className="p-4 text-blue-600"
+                />
+              </a>
+              {/* <FontAwesomeIcon
               icon={faFile}
               size="2x"
               className="p-4 text-blue-600"
             /> */}
+            </div>
           </div>
         </div>
+
         <div className="flex items-center justify-center">
           <img
             src="https://media.licdn.com/dms/image/v2/D4E03AQGgLVs0vgJWQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727713654350?e=1739404800&v=beta&t=Mc7THVaNPQrqGF--cuxqIvJEKKsFsMfHFiOZw5WAl30"
