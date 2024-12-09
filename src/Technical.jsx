@@ -39,7 +39,7 @@ const Technical = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti amet
           aspernatur repellendus? Laboriosam inventore praesentium nesciunt iste
           architecto tempora suscipit adipisci maxime, numquam sequi iusto! Ad
-          corrupti amet placeat quibusdam
+          corrupti amet placeat quibusdam?
         </p>
       </div>
       <div className="w-full max-w-screen-xl p-8 gap-y-8 grid grid-cols-1 md:grid-cols-3 gap-x-16">
