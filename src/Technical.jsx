@@ -5,17 +5,17 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
     <div
       id="technical"
       ref={ref}
-      className={`min-h-screen flex flex-col items-center justify-center ${
+      className={`min-h-screen flex flex-col items-center justify-center mb-12 ${
         isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
       }`}
     >
       <div className="border-b-blue-600 border-b-4">
-        <h1 className="text-center text-5xl md:text-left md:text-7xl">
+        <h1 className="text-center text-5xl md:text-left md:text-6xl">
           Skills
         </h1>
       </div>
       <div className="max-w-screen-lg my-8 mx-8">
-        <p className="text-2xl md:text-3xl text-center font-thin">
+        <p className="text-xl md:text-2xl text-center font-thin">
           A collection of the tools, languages, and frameworks that I use to
           turn creative ideas into functional and efficient software.
         </p>
@@ -27,12 +27,12 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
           }`}
         >
           <div className="bg-blue-600 rounded-t-xl p-8">
-            <h1 className="text-3xl md:text-4xl text-main text-center">
+            <h1 className="text-2xl md:text-3xl text-main text-center">
               Languages
             </h1>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Javascript</p>
+            <p className="text-xl md:text-2xl mr-2">Javascript</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/JavaScript.svg"
               alt="JavaScript"
@@ -41,7 +41,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Python</p>
+            <p className="text-xl md:text-2xl mr-2">Python</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Python.svg"
               alt=""
@@ -50,7 +50,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">PostgreSQL</p>
+            <p className="text-xl md:text-2xl mr-2">PostgreSQL</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
               alt=""
@@ -59,7 +59,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">HTML</p>
+            <p className="text-xl md:text-2xl mr-2">HTML</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/HTML5.svg"
               alt=""
@@ -68,7 +68,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center pb-4">
-            <p className="text-2xl mr-2">CSS</p>
+            <p className="text-xl md:text-2xl mr-2">CSS</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/CSS3.svg "
               alt=""
@@ -84,12 +84,12 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
           }`}
         >
           <div className="bg-blue-600 rounded-t-xl p-8">
-            <h1 className="text-3xl md:text-4xl text-main text-center">
+            <h1 className="text-2xl md:text-3xl text-main text-center">
               Frameworks & Libraries
             </h1>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">React.js</p>
+            <p className="text-xl md:text-2xl mr-2">React.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/React.svg"
               alt="JavaScript"
@@ -98,7 +98,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Node.js</p>
+            <p className="text-xl md:text-2xl mr-2">Node.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Node.js.svg"
               alt=""
@@ -107,7 +107,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Express.js</p>
+            <p className="text-xl md:text-2xl mr-2">Express.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Express.svg"
               alt=""
@@ -116,7 +116,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Flask</p>
+            <p className="text-xl md:text-2xl mr-2">Flask</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Flask.svg"
               alt=""
@@ -125,7 +125,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Pandas</p>
+            <p className="text-xl md:text-2xl mr-2">Pandas</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Pandas.svg"
               alt=""
@@ -134,7 +134,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Bootstrap</p>
+            <p className="text-xl md:text-2xl mr-2">Bootstrap</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Bootstrap.svg"
               alt=""
@@ -143,7 +143,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">TailwindCSS</p>
+            <p className="text-xl md:text-2xl mr-2">TailwindCSS</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
               alt=""
@@ -152,7 +152,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center pb-4">
-            <p className="text-2xl mr-2">Vite.js</p>
+            <p className="text-xl md:text-2xl mr-2">Vite.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Vite.js.svg"
               alt=""
@@ -168,12 +168,12 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
           }`}
         >
           <div className="bg-blue-600 rounded-t-xl p-8">
-            <h1 className="text-3xl md:text-4xl text-main text-center">
+            <h1 className="text-2xl md:text-3xl text-main text-center">
               Developer Tools
             </h1>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Postman</p>
+            <p className="text-xl md:text-2xl mr-2">Postman</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Postman.svg"
               alt=""
@@ -182,7 +182,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Git</p>
+            <p className="text-xl md:text-2xl mr-2">Git</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Git.svg"
               alt=""
@@ -191,7 +191,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">Github</p>
+            <p className="text-xl md:text-2xl mr-2">Github</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/GitHub.svg"
               alt=""
@@ -200,7 +200,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-2xl mr-2">NPM</p>
+            <p className="text-xl md:text-2xl mr-2">NPM</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/NPM.svg"
               alt=""
@@ -209,7 +209,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
             />
           </div>
           <div className="flex items-center justify-center pb-4">
-            <p className="text-2xl mr-2">Firebase</p>
+            <p className="text-xl md:text-2xl mr-2">Firebase</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Firebase.svg"
               alt=""
