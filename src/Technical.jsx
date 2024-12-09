@@ -1,36 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const Technical = () => {
-  const technicalRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true); // Set visible when in viewport
-        } else {
-          setIsVisible(false); // Reset when out of viewport
-        }
-      },
-      { threshold: 0.1 } // Adjust the threshold as needed
-    );
-
-    if (technicalRef.current) {
-      observer.observe(technicalRef.current);
-    }
-
-    return () => {
-      if (technicalRef.current) {
-        observer.unobserve(technicalRef.current);
-      }
-    };
-  }, []);
+const Technical = React.forwardRef(({ isVisible }, ref) => {
   return (
     <div
       id="technical"
-      ref={technicalRef}
-      className={`min-h-screen flex flex-col items-center justify-center px-4 transition-opacity duration-1000 ease-in ${
+      ref={ref}
+      className={`min-h-screen flex flex-col items-center justify-center ${
         isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
       }`}
     >
@@ -39,14 +14,18 @@ const Technical = () => {
           Skills
         </h1>
       </div>
-      <div className="max-w-screen-lg my-8">
+      <div className="max-w-screen-lg my-8 mx-8">
         <p className="text-2xl md:text-3xl text-center font-thin">
           A collection of the tools, languages, and frameworks that I use to
           turn creative ideas into functional and efficient software.
         </p>
       </div>
       <div className="w-full max-w-screen-xl p-8 gap-y-8 grid grid-cols-1 md:grid-cols-3 gap-x-8">
-        <div className="animate-fade-left rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4">
+        <div
+          className={`rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4 ${
+            isVisible && "animate-fade-up"
+          }`}
+        >
           <div className="bg-blue-600 rounded-t-xl p-8">
             <h1 className="text-3xl md:text-4xl text-main text-center">
               Languages
@@ -99,7 +78,11 @@ const Technical = () => {
           </div>
         </div>
         {/* Frameworks & Libraries */}
-        <div className="animate-fade-left rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4">
+        <div
+          className={`rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4 ${
+            isVisible && "animate-fade-up"
+          }`}
+        >
           <div className="bg-blue-600 rounded-t-xl p-8">
             <h1 className="text-3xl md:text-4xl text-main text-center">
               Frameworks & Libraries
@@ -179,7 +162,11 @@ const Technical = () => {
           </div>
         </div>
         {/* Developer Tools */}
-        <div className="animate-fade-left rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4">
+        <div
+          className={`rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4 ${
+            isVisible && "animate-fade-up"
+          }`}
+        >
           <div className="bg-blue-600 rounded-t-xl p-8">
             <h1 className="text-3xl md:text-4xl text-main text-center">
               Developer Tools
@@ -234,6 +221,6 @@ const Technical = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Technical;

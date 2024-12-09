@@ -1,8 +1,14 @@
 import React from "react";
 
-const LandingPage = () => {
+const LandingPage = React.forwardRef(({ isVisible }, ref) => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div
+      id="landing"
+      ref={ref}
+      className={`min-h-screen flex flex-col items-center justify-center px-4 transition-opacity duration-1000 ease-in ${
+        isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
+      }`}
+    >
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] px-4 max-w-screen-lg animate-fade-left animate-run animate-ease-out animate-duration-700 mb-12">
         <div className="flex flex-col justify-start">
           <h1 className="text-center text-5xl md:text-left md:text-7xl">
@@ -28,6 +34,6 @@ const LandingPage = () => {
       </div>
     </div>
   );
-};
+});
 
 export default LandingPage;
