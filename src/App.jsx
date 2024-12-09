@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Nav from "./Nav";
 import LandingPage from "./LandingPage";
 import Footer from "./Footer";

@@ -8,10 +8,10 @@ const LandingPage = () => {
           <h1 className="text-center text-5xl md:text-left md:text-7xl">
             Carlitos Dutan
           </h1>
-          <p className="text-center text-blue-600 text-2xl md:text-left md:text-3xl py-2">
+          <p className="text-center text-blue-600 text-3xl md:text-left md:text-4xl py-2">
             Software Engineer
           </p>
-          <p className="text-center text-slate-800 text-md pb-4 md:pb-0 md:text-left md:text-lg font-thin">
+          <p className="text-center text-slate-800 text-2xl pb-4 md:pb-0 md:text-left md:text-3xl font-thin">
             I’m passionate about using technology to bring creative ideas to
             life. I focus on building innovative solutions and exploring new
             ways to push the boundaries of what’s possible in software
@@ -22,7 +22,7 @@ const LandingPage = () => {
           <img
             src="https://media.licdn.com/dms/image/v2/D4E03AQGgLVs0vgJWQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727713654350?e=1739404800&v=beta&t=Mc7THVaNPQrqGF--cuxqIvJEKKsFsMfHFiOZw5WAl30"
             alt=""
-            className="rounded-full"
+            className="w-100 h-72"
           />
         </div>
       </div>

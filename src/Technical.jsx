@@ -1,20 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const Technical = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const technicalRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setIsVisible(true); // Set visible when in viewport
         } else {
-          setIsVisible(false);
+          setIsVisible(false); // Reset when out of viewport
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 } // Adjust the threshold as needed
     );
+
     if (technicalRef.current) {
       observer.observe(technicalRef.current);
     }
@@ -25,30 +26,34 @@ const Technical = () => {
       }
     };
   }, []);
-
   return (
     <div
       id="technical"
-      className="min-h-screen flex flex-col items-center justify-center"
+      ref={technicalRef}
+      className={`min-h-screen flex flex-col items-center justify-center px-4 transition-opacity duration-1000 ease-in ${
+        isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
+      }`}
     >
       <div className="border-b-blue-600 border-b-4">
-        <h1 className="text-6xl">Skills</h1>
+        <h1 className="text-center text-5xl md:text-left md:text-7xl">
+          Skills
+        </h1>
       </div>
       <div className="max-w-screen-lg my-8">
-        <p className="text-lg text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti amet
-          aspernatur repellendus? Laboriosam inventore praesentium nesciunt iste
-          architecto tempora suscipit adipisci maxime, numquam sequi iusto! Ad
-          corrupti amet placeat quibusdam?
+        <p className="text-2xl md:text-3xl text-center font-thin">
+          A collection of the tools, languages, and frameworks that I use to
+          turn creative ideas into functional and efficient software.
         </p>
       </div>
-      <div className="w-full max-w-screen-xl p-8 gap-y-8 grid grid-cols-1 md:grid-cols-3 gap-x-16">
+      <div className="w-full max-w-screen-xl p-8 gap-y-8 grid grid-cols-1 md:grid-cols-3 gap-x-8">
         <div className="animate-fade-left rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4">
           <div className="bg-blue-600 rounded-t-xl p-8">
-            <h1 className="text-4xl text-main text-center">Languages</h1>
+            <h1 className="text-3xl md:text-4xl text-main text-center">
+              Languages
+            </h1>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Javascript</p>
+            <p className="text-2xl mr-2">Javascript</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/JavaScript.svg"
               alt="JavaScript"
@@ -57,7 +62,7 @@ const Technical = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Python</p>
+            <p className="text-2xl mr-2">Python</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Python.svg"
               alt=""
@@ -66,7 +71,7 @@ const Technical = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">PostgreSQL</p>
+            <p className="text-2xl mr-2">PostgreSQL</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
               alt=""
@@ -75,7 +80,7 @@ const Technical = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">HTML</p>
+            <p className="text-2xl mr-2">HTML</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/HTML5.svg"
               alt=""
@@ -84,7 +89,7 @@ const Technical = () => {
             />
           </div>
           <div className="flex items-center justify-center pb-4">
-            <p className="text-xl mr-2">CSS</p>
+            <p className="text-2xl mr-2">CSS</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/CSS3.svg "
               alt=""
@@ -93,19 +98,15 @@ const Technical = () => {
             />
           </div>
         </div>
-        {/* /////////////////////// */}
-        {/* Languages: Javascript, Python, HTML, CSS, PostgreSQL
-Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, Bcrypt Developer Tools: Postman, Git, GitHub, NPM, Firebase, ElephantSQL */}
-
-        {/* Missing JWT, Bcrypt, ElephantSQL */}
+        {/* Frameworks & Libraries */}
         <div className="animate-fade-left rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4">
           <div className="bg-blue-600 rounded-t-xl p-8">
-            <h1 className="text-4xl text-main text-center">
+            <h1 className="text-3xl md:text-4xl text-main text-center">
               Frameworks & Libraries
             </h1>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">React.js</p>
+            <p className="text-2xl mr-2">React.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/React.svg"
               alt="JavaScript"
@@ -114,7 +115,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Node.js</p>
+            <p className="text-2xl mr-2">Node.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Node.js.svg"
               alt=""
@@ -123,7 +124,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Express.js</p>
+            <p className="text-2xl mr-2">Express.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Express.svg"
               alt=""
@@ -132,7 +133,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Flask</p>
+            <p className="text-2xl mr-2">Flask</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Flask.svg"
               alt=""
@@ -141,7 +142,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Pandas</p>
+            <p className="text-2xl mr-2">Pandas</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Pandas.svg"
               alt=""
@@ -150,7 +151,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Bootstrap</p>
+            <p className="text-2xl mr-2">Bootstrap</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Bootstrap.svg"
               alt=""
@@ -159,7 +160,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">TailwindCSS</p>
+            <p className="text-2xl mr-2">TailwindCSS</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
               alt=""
@@ -168,7 +169,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center pb-4">
-            <p className="text-xl mr-2">Vite.js</p>
+            <p className="text-2xl mr-2">Vite.js</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Vite.js.svg"
               alt=""
@@ -177,14 +178,15 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
         </div>
-        {/* Devvvv */}
-        {/* Dev */}
+        {/* Developer Tools */}
         <div className="animate-fade-left rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4">
           <div className="bg-blue-600 rounded-t-xl p-8">
-            <h1 className="text-4xl text-main text-center">Developer Tools</h1>
+            <h1 className="text-3xl md:text-4xl text-main text-center">
+              Developer Tools
+            </h1>
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Postman</p>
+            <p className="text-2xl mr-2">Postman</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Postman.svg"
               alt=""
@@ -193,7 +195,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Git</p>
+            <p className="text-2xl mr-2">Git</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Git.svg"
               alt=""
@@ -202,7 +204,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">Github</p>
+            <p className="text-2xl mr-2">Github</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/GitHub.svg"
               alt=""
@@ -211,7 +213,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center">
-            <p className="text-xl mr-2">NPM</p>
+            <p className="text-2xl mr-2">NPM</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/NPM.svg"
               alt=""
@@ -220,7 +222,7 @@ Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, TailwindCSS, JWT, B
             />
           </div>
           <div className="flex items-center justify-center pb-4">
-            <p className="text-xl mr-2">Firebase</p>
+            <p className="text-2xl mr-2">Firebase</p>
             <img
               src="https://icon.icepanel.io/Technology/svg/Firebase.svg"
               alt=""
