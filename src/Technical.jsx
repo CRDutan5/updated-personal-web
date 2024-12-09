@@ -15,7 +15,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
         </h1>
       </div>
       <div className="max-w-screen-lg my-8 mx-8">
-        <p className="text-xl md:text-2xl text-center font-thin">
+        <p className="text-xl md:text-2xl text-center font-extralight">
           A collection of the tools, languages, and frameworks that I use to
           turn creative ideas into functional and efficient software.
         </p>
