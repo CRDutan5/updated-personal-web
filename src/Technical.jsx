@@ -5,11 +5,11 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
     <div
       id="technical"
       ref={ref}
-      className={`min-h-screen flex flex-col items-center justify-center mb-12${
+      className={`min-h-screen flex flex-col items-center justify-center mb-16${
         isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
       }`}
     >
-      <div className="border-b-blue-600 border-b-4 mb-8">
+      <div className="border-b-blue-600 border-b-4">
         <h1 className="text-center text-5xl md:text-left md:text-6xl font-semibold">
           Skills
         </h1>
@@ -20,7 +20,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
           turn creative ideas into functional and efficient software.
         </p>
       </div>
-      <div className="w-full max-w-screen-xl p-8 gap-y-8 grid grid-cols-1 md:grid-cols-3 gap-x-8">
+      <div className="w-full max-w-screen-xl px-8 gap-y-8 grid grid-cols-1 md:grid-cols-3 gap-x-8">
         {/* Languages */}
         <div
           className={`rounded-3xl shadow-[-28px_40px_38px_7px_rgba(0,_0,_0,_0.1)] flex flex-col gap-y-4 ${
