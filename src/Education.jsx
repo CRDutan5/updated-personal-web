@@ -10,10 +10,17 @@ const Education = React.forwardRef(({ isVisible }, ref) => {
       id="education"
     >
       {/* Education Heading Section */}
-      <div className="text-center mb-12">
+      <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 tracking-wider uppercase">
           Education
         </h1>
+      </div>
+      <div className="max-w-screen-lg my-8 mx-8">
+        <p className="text-xl md:text-2xl text-center font-light leading-relaxed">
+          Where I built the foundation of my software development career,
+          combining rigorous academic training in college with practical,
+          hands-on experience during my fellowship.
+        </p>
       </div>
 
       {/* Education Content */}

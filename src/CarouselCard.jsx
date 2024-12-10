@@ -18,7 +18,7 @@ const CarouselCard = ({ project }) => {
           {project.title}
         </h3>
         <p className="text-lg text-gray-700 mt-2">{project.about}</p>
-        <p className="mt-4 text-gray-600 font-light text-sm">
+        <p className="mt-4 text-gray-600 font-light text-md">
           {project.techstack}
         </p>
 

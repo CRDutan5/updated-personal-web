@@ -69,7 +69,7 @@ const LandingPage = React.forwardRef(({ isVisible }, ref) => {
           <img
             src="https://media.licdn.com/dms/image/v2/D4E03AQGgLVs0vgJWQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727713654350?e=1739404800&v=beta&t=Mc7THVaNPQrqGF--cuxqIvJEKKsFsMfHFiOZw5WAl30"
             alt="Profile"
-            className="w-56 h-56 md:w-72 md:h-72 shadow-4xl"
+            className="shadow-4xl md:mb-16"
           />
         </div>
       </div>
