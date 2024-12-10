@@ -27,12 +27,12 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
     {
       title: "FPL Analyzer",
       about:
-        "The Fantasy Premier League (FPL) Analyzer is a Python-powered tool designed to provide FPL managers with data-driven insights to optimize team performance and rankings. By integrating Flask, Pandas, and the FPL API, it analyzes over 600 Premier League players and delivers weekly performance statistics and recommendations. The system features robust automation through SMTP and Gmail for consistent weekly delivery, alongside comprehensive logging for real-time monitoring and faster debugging. This tool simplifies complex data analysis, making it accessible and actionable for FPL enthusiasts.",
-      techstack: "Python, Pandas, Flask, SMTP, Launchd, FPL API",
+        "The Fantasy Premier League (FPL) Analyzer helps FPL managers optimize team performance with data-driven insights. It analyzes over 600 players, offering weekly statistics, personalized recommendations, automated email updates, and efficient logging for smooth performance, making it a valuable resource for FPL enthusiasts.",
       image:
         "https://s.yimg.com/ny/api/res/1.2/53o6K34g4Z5eAoBoPsNZUg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://media.zenfs.com/en/creative_bloq_161/87fefa9e5a05f4e3b07c88f2fe805fcc",
       website: null,
       github: "https://github.com/CRDutan5/fpl-project-v2",
+      techstack: "Python, Flask, Pandas, SMTP, Launchd, FPL API",
     },
     {
       title: "H2H",
@@ -68,7 +68,7 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
     >
       <div className="border-b-blue-600 border-b-4">
         <h1 className="text-center text-5xl md:text-left md:text-6xl">
-          Skills
+          Projects
         </h1>
       </div>
       <div className="max-w-screen-lg my-8 mx-8">
@@ -78,10 +78,13 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
           and innovative thinking. My work includes:
         </p>
       </div>
-      <div className="w-full max-w-4xl my-8">
-        <Carousel responsive={responsive} className="w-full h-auto">
-          {projectInfo.map((project) => (
-            <div className="flex items-center justify-center bg-gray-200 h-72">
+      <div className="w-full max-w-7xl my-8">
+        <Carousel responsive={responsive} className="w-full">
+          {projectInfo.map((project, index) => (
+            <div
+              className="flex items-center justify-center bg-main"
+              key={index}
+            >
               <CarouselCard project={project} />
             </div>
           ))}
