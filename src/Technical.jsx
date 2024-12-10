@@ -9,9 +9,9 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
         isVisible && "animate-fade-left"
       }`}
     >
-      <div className="border-b-blue-600 border-b-4">
-        <h1 className="text-center text-5xl md:text-left md:text-6xl font-semibold">
-          Skills
+      <div className="text-center">
+        <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 tracking-wider uppercase">
+          SKILLS
         </h1>
       </div>
       <div className="max-w-screen-lg my-8 mx-8">
