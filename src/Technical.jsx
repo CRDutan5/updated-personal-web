@@ -5,16 +5,26 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
     <div
       id="technical"
       ref={ref}
-      className={`min-h-screen flex flex-col items-center justify-center mb-16${
+      className={`min-h-screen flex flex-col items-center justify-center mb-16 ${
         isVisible && "animate-fade-left"
       }`}
     >
-      <div className="text-center">
+      {/* Header Section */}
+      <div
+        className={`text-center ${
+          isVisible && "animate-fade-left"
+        } transition-opacity duration-1000`}
+      >
         <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 tracking-wider uppercase">
           SKILLS
         </h1>
       </div>
-      <div className="max-w-screen-lg my-8 mx-8">
+      <div
+        className={`max-w-screen-lg my-8 mx-8 ${
+          isVisible && "animate-fade-left"
+        } transition-opacity duration-1000`}
+      >
+        {" "}
         <p className="text-xl md:text-2xl text-center font-light leading-relaxed">
           A collection of the tools, languages, and frameworks that I use to
           turn creative ideas into functional and efficient software.
