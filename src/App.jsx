@@ -64,7 +64,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-main">
+    <div className="bg-main font-rubik">
       <Nav />
       <LandingPage
         ref={landingPageRef}
@@ -80,6 +80,7 @@ const App = () => {
       />
       <Projects ref={projectRef} isVisible={visibilityStates.projectPage} />
       {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

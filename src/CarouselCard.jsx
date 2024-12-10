@@ -2,19 +2,50 @@ import React from "react";
 
 const CarouselCard = ({ project }) => {
   return (
-    <div className="flex flex-col min-h-fit">
-      <div>
-        <img src={project.image} className="w-full h-72 object-cover" alt="" />
+    <div className="flex flex-col items-center justify-center w-full h-full">
+      {/* Image Section */}
+      <div className="w-full h-48 overflow-hidden rounded-md">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-contain" // This prevents image from being squeezed
+        />
       </div>
-      <div className="p-4">
-        <h1 className="text-3xl md:text-4xl border-blue-400 border-b-4">
+
+      {/* Card Content Section */}
+      <div className="mt-4 flex flex-col items-center text-center">
+        <h3 className="text-2xl font-semibold text-gray-900">
           {project.title}
-        </h1>
-        <p className="text-lg md:text-xl py-2">
-          <span className="font-bold text-blue-600">TechStack: </span>
+        </h3>
+        <p className="text-lg text-gray-700 mt-2">{project.about}</p>
+        <p className="mt-4 text-gray-600 font-light text-sm">
           {project.techstack}
         </p>
-        <p className=" font-light">{project.about}</p>
+
+        {/* Links */}
+        <div className="mt-4">
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              GitHub
+            </a>
+          )}
+          {/* {project.website && <span className="mx-2">|</span>} */}
+          {project.website && (
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Website
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

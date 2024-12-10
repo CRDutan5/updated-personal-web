@@ -29,7 +29,7 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
       about:
         "The Fantasy Premier League (FPL) Analyzer helps FPL managers optimize team performance with data-driven insights. It analyzes over 600 players, offering weekly statistics, personalized recommendations, automated email updates, and efficient logging for smooth performance, making it a valuable resource for FPL enthusiasts.",
       image:
-        "https://s.yimg.com/ny/api/res/1.2/53o6K34g4Z5eAoBoPsNZUg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://media.zenfs.com/en/creative_bloq_161/87fefa9e5a05f4e3b07c88f2fe805fcc",
+        "https://logodownload.org/wp-content/uploads/2016/03/premier-league-5.png",
       website: null,
       github: "https://github.com/CRDutan5/fpl-project-v2",
       techstack: "Python, Flask, Pandas, SMTP, Launchd, FPL API",
@@ -53,8 +53,7 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
       image:
         "https://github.com/ArmandoPires103/TutorLink-Frontend/blob/main/public/TutorLink.png?raw=true",
       website: null,
-      github:
-        "https://github.com/ArmandoPires103/TutorLink-Frontend/blob/main/public/TutorLink.png?raw=true",
+      github: "https://github.com/ArmandoPires103/TutorLink-Frontend",
     },
   ];
 
@@ -66,23 +65,31 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
         isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
       }`}
     >
-      <div className="border-b-blue-600 border-b-4">
-        <h1 className="text-center text-5xl md:text-left md:text-6xl">
+      {/* Heading Section */}
+      <div className="text-center">
+        <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 tracking-wider uppercase">
           Projects
         </h1>
       </div>
-      <div className="max-w-screen-lg my-8 mx-8">
-        <p className="text-xl md:text-2xl text-center font-extralight">
+
+      {/* Intro Section */}
+      <div className="max-w-screen-lg mx-8 mt-4 mb-8 text-center">
+        <p className="text-xl md:text-2xl font-light text-gray-700">
           As a software engineer, I've developed a diverse portfolio of projects
           that showcase my skills in full-stack development, problem-solving,
           and innovative thinking. My work includes:
         </p>
       </div>
-      <div className="w-full max-w-7xl my-8">
-        <Carousel responsive={responsive} className="w-full">
+
+      {/* Carousel Section */}
+      <div className="w-full bg-white">
+        <Carousel
+          responsive={responsive}
+          className="w-full shadow-lg rounded-xl"
+        >
           {projectInfo.map((project, index) => (
             <div
-              className="flex items-center justify-center bg-main"
+              className="flex items-center justify-center bg-white bg-opacity-80 border-t-4 border-blue-600 p-8 rounded-lg"
               key={index}
             >
               <CarouselCard project={project} />
