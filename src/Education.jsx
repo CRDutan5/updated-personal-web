@@ -4,7 +4,7 @@ const Education = React.forwardRef(({ isVisible }, ref) => {
   return (
     <div
       className={`min-h-screen my-16 flex flex-col items-center justify-center ${
-        isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
+        isVisible && "animate-fade-left"
       }`}
       ref={ref}
       id="education"

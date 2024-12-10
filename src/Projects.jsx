@@ -62,7 +62,7 @@ const Projects = React.forwardRef(({ isVisible }, ref) => {
       id="projects"
       ref={ref}
       className={`min-h-screen flex flex-col items-center justify-center px-4 transition-opacity duration-1000 ease-in ${
-        isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
+        isVisible && "animate-fade-left"
       }`}
     >
       {/* Heading Section */}

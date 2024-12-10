@@ -6,7 +6,7 @@ const Technical = React.forwardRef(({ isVisible }, ref) => {
       id="technical"
       ref={ref}
       className={`min-h-screen flex flex-col items-center justify-center mb-16${
-        isVisible ? "opacity-100 animate-fade-left" : "opacity-0"
+        isVisible && "animate-fade-left"
       }`}
     >
       <div className="border-b-blue-600 border-b-4">
