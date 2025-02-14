@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the component
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Import the GitHub icon
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import personalpic from "./assets/personalpic.jpeg";
 
 const LandingPage = React.forwardRef(({ isVisible }, ref) => {
   return (
@@ -65,9 +66,9 @@ const LandingPage = React.forwardRef(({ isVisible }, ref) => {
 
         <div className="flex items-center justify-center">
           <img
-            src="https://media.licdn.com/dms/image/v2/D4E03AQGgLVs0vgJWQg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727713654350?e=1739404800&v=beta&t=Mc7THVaNPQrqGF--cuxqIvJEKKsFsMfHFiOZw5WAl30"
+            src={personalpic}
             alt="Profile"
-            className="shadow-4xl md:mb-16"
+            className="shadow-4xl md:mb-16 h-72 w-60"
           />
         </div>
       </div>
